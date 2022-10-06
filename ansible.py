@@ -1,8 +1,12 @@
-def print_range(start, end):
-	# Loop through the numbers from start to end
-	n = start
-	while n <= end:
-		print(n)
-		n+=1
+def count_users(group):
+  count = 0
+  for member in get_members(group):
+    if is_group(member):
+      count+=count_users(member)
+      continue
+    count += 1
+  return count
 
-print_range(1, 5)  # Should print 1 2 3 4 5 (each number on its own line) 
+print(count_users("sales")) # Should be 3
+print(count_users("engineering")) # Should be 8
+print(count_users("everyone")) # Should be 18
