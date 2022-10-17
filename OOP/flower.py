@@ -2,12 +2,11 @@ class Flower:
   color = 'unknown'
 
 rose = Flower()
-rose.color = "Red"
+rose.color = "red"
 
-violet = Flower()
-violet.color = "Blue"
-
-this_pun_is_for_you = "Please Marry me!!!"
+violet= Flower()
+violet.color="purple"
+this_pun_is_for_you = "I love you. "
 
 print("Roses are {},".format(rose.color))
 print("violets are {},".format(violet.color))
