@@ -1,3 +1,12 @@
+# The City class has the following attributes: 
+# name, country (where the city is located), elevation (measured in meters), 
+# and population (approximate, according to recent statistics). 
+# Fill in the blanks of the max_elevation_city function to return the name of the city and its country (separated by a comma), 
+# when comparing the 3 defined instances for a specified minimal population. 
+# For example, calling the function for a minimum population of 1 million: 
+# max_elevation_city(1000000) should return "Sofia, Bulgaria". 
+
+# define a basic city class
 # define a basic city class
 class City:
 	name = ""
@@ -38,25 +47,25 @@ def max_elevation_city(min_population):
 	# Evaluate the 1st instance to meet the requirements:
 	# does city #1 have at least min_population and
 	# is its elevation the highest evaluated so far?
-	if city1.population>=min_population:# and city1.elevation>city2.elevation and city1.elevation>city3.elevation:
+	if city1.population>=min_population :
 		return_city = city1
 	# Evaluate the 2nd instance to meet the requirements:
 	# does city #2 have at least min_population and
 	# is its elevation the highest evaluated so far?
-	elif city2.population>=min_population:# and city2.elevation>city1.elevation and city2.elevation>city3.elevation:
+	elif city2.population>=min_population: 
 		return_city = city2
 	# Evaluate the 3rd instance to meet the requirements:
 	# does city #3 have at least min_population and
 	# is its elevation the highest evaluated so far?
-	elif city3.population>=min_population:# and city3.elevation>city2.elevation and city3.elevation>city1.elevation:
+	elif city3.population>=min_population:
 		return_city = city3
 
 	#Format the return string
 	if return_city.name:
-		return "{}, {}".format(return_city.name,return_city.country)
+		return "{}, {}".format(return_city.name, return_city.country)
 	else:
 		return ""
 
 print(max_elevation_city(100000)) # Should print "Cusco, Peru"
 print(max_elevation_city(1000000)) # Should print "Sofia, Bulgaria"
-print(max_elevation_city(10000000)) # Should print ""
+print(max_elevation_city(10000000)) # Should print """
